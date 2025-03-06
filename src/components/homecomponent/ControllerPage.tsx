@@ -14,8 +14,7 @@ const HeroSection: React.FC = () => {
   return (
     <div className="text-center px-6 py-16 flex flex-col items-center">
       <p className="text-sm uppercase tracking-widest text-gray-700 mt-8">Curiouslyfly</p>
-      
-      {/* Title in Two Lines */}
+    
       <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mt-2">
         Introducing 
       </h1>
@@ -27,8 +26,7 @@ const HeroSection: React.FC = () => {
         The central intelligence of your smart home, seamlessly integrating and managing all connected
         devices for a smooth automation experience.
       </p>
-
-      {/* Explore Button */}
+      
       <div className="mt-6">
         <button className="bg-black text-white px-6 py-3 rounded-full text-lg font-medium hover:bg-gray-900 transition">
           Explore

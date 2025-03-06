@@ -4,7 +4,6 @@ import Button from "../globalcomponents/ButtonSubmit";
 import { isValidPhoneNumber } from "libphonenumber-js";
 
 const ContactForm: React.FC = () => {
-  // State for form data
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -17,16 +16,14 @@ const ContactForm: React.FC = () => {
     message: "",
   });
 
-  // State for error messages
   const [errors, setErrors] = useState<Record<string, string>>({});
 
-  // Handle Input Change
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  // Validate Form
   const validateForm = () => {
     let newErrors: Record<string, string> = {};
 
@@ -51,10 +48,9 @@ const ContactForm: React.FC = () => {
     if (!formData.message.trim()) newErrors.message = "Message is required";
 
     setErrors(newErrors);
-    return Object.keys(newErrors).length === 0; // Return true if no errors
+    return Object.keys(newErrors).length === 0; 
   };
 
-  // Handle Form Submit
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (validateForm()) {
@@ -78,7 +74,6 @@ const ContactForm: React.FC = () => {
   return (
     <div className="bg-black text-white px-6 py-12 sm:px-16 lg:px-32">
       <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10">
-        {/* Left Section - Text Content */}
         <div>
           <h2 className="text-5xl font-semibold">Let’s Connect</h2>
           <p className="text-gray-300 mt-4">
@@ -88,8 +83,6 @@ const ContactForm: React.FC = () => {
             details, our team at <span className="font-bold">Curiousfly</span> is ready to assist you.
           </p>
         </div>
-
-        {/* Right Section - Form */}
         <form className="grid grid-cols-1 sm:grid-cols-2 gap-4" onSubmit={handleSubmit}>
           <InputField name="firstName" placeholder="First Name *" required value={formData.firstName} onChange={handleChange} />
           {errors.firstName && <p className="text-red-500 text-sm">{errors.firstName}</p>}
@@ -115,7 +108,6 @@ const ContactForm: React.FC = () => {
           <InputField name="occupation" placeholder="Occupation *" required value={formData.occupation} onChange={handleChange} />
           {errors.occupation && <p className="text-red-500 text-sm">{errors.occupation}</p>}
 
-          {/* Textarea */}
           <div className="col-span-1 sm:col-span-2">
             <textarea
               id="message"
@@ -128,8 +120,6 @@ const ContactForm: React.FC = () => {
             ></textarea>
             {errors.message && <p className="text-red-500 text-sm">{errors.message}</p>}
           </div>
-
-          {/* Submit Button */}
           <div className="col-span-1 sm:col-span-2 flex justify-center sm:justify-start">
             <Button title="Submit" type="submit" />
           </div>

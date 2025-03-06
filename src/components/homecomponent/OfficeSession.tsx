@@ -14,7 +14,6 @@ const OfficeSession: React.FC<HeroProps> = ({ title, description, buttonText, ba
       className="relative w-full h-screen flex items-center justify-center text-black bg-white"
       style={{ backgroundImage: `url(${backgroundImage})`, backgroundSize: "cover", backgroundPosition: "center" }}
     >
-      {/* Text Content Positioned at Bottom Right */}
       <div className="absolute bottom-32 right-8 max-w-xl p-8 text-left">
         <h1 className="text-2xl sm:text-3xl font-semibold mb-4">{title}</h1>
         <p className="text-lg sm:text-xl text-gray-500 mb-6">{description}</p>
