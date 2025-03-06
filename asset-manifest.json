@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/amber-pro/static/css/main.62942f1c.css",
+    "main.js": "/amber-pro/static/js/main.dcee2957.js",
+    "static/js/453.0182f54b.chunk.js": "/amber-pro/static/js/453.0182f54b.chunk.js",
+    "static/media/iphonescreen2.png": "/amber-pro/static/media/iphonescreen2.f5dbd4ee998d419bf87b.png",
+    "static/media/iphonescreen3.png": "/amber-pro/static/media/iphonescreen3.f341acf0a7e2807c7b65.png",
+    "static/media/iphone1screen1.png": "/amber-pro/static/media/iphone1screen1.26d9e142389d16631030.png",
+    "static/media/controllerbox.png": "/amber-pro/static/media/controllerbox.8ac6910be6464a3b5198.png",
+    "index.html": "/amber-pro/index.html",
+    "main.62942f1c.css.map": "/amber-pro/static/css/main.62942f1c.css.map",
+    "main.dcee2957.js.map": "/amber-pro/static/js/main.dcee2957.js.map",
+    "453.0182f54b.chunk.js.map": "/amber-pro/static/js/453.0182f54b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.62942f1c.css",
+    "static/js/main.dcee2957.js"
+  ]
+}
