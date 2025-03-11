@@ -1,5 +1,5 @@
 import React from "react";
-import ProductImg from "../../assests/controllerbox.png"; 
+import ProductImg from "../../assests/homecontroler.png"; 
 
 const ProductImage: React.FC = () => {
   return (
@@ -7,7 +7,7 @@ const ProductImage: React.FC = () => {
       <img
         src={ProductImg}
         alt="Smart Home Controller"
-        className="w-full max-w-3xl h-[25rem] object-cover rounded-2xl shadow-lg"
+        className="w-[344px] h-[268.4px] sm:w-[1148.6px] sm:h-[540.26px] object-cover rounded-[7px] shadow-lg"
       />
     </div>
   );

@@ -48,7 +48,7 @@ const ContactForm: React.FC = () => {
     if (!formData.message.trim()) newErrors.message = "Message is required";
 
     setErrors(newErrors);
-    return Object.keys(newErrors).length === 0; 
+    return Object.keys(newErrors).length === 0;
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -75,13 +75,29 @@ const ContactForm: React.FC = () => {
     <div className="bg-black text-white px-6 py-12 sm:px-16 lg:px-32">
       <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10">
         <div>
-          <h2 className="text-5xl font-semibold">Let’s Connect</h2>
-          <p className="text-gray-300 mt-4">
-            Have questions about making your home smarter, safer, and more
-            efficient? We’re here to help! Whether you’re looking for
-            personalized automation solutions, expert advice, or product
-            details, our team at <span className="font-bold">Curiousfly</span> is ready to assist you.
+          <h2
+            className="font-inter font-medium text-[44px] leading-[57.2px] 
+             "
+          >
+            Let’s Connect
+          </h2>
+
+          <p
+            className="font-inter font-medium text-[21px] leading-[29px]
+             align-middle text-[#757575] mt-4"
+          >
+            Have questions about making your home smarter, safer, and more efficient? We're here to help!
+            Whether you're looking for personalized automation solutions, expert advice, or product details,
+            our team at
+            <span
+              className="font-inter font-medium text-[21px] leading-[29px]
+               font-bold text-[#FFFFFF] px-2"
+            >
+              Curiousfly is ready to assist you.
+            </span>
+            Connect with us today and take the first step toward a seamlessly intelligent living experience.
           </p>
+
         </div>
         <form className="grid grid-cols-1 sm:grid-cols-2 gap-4" onSubmit={handleSubmit}>
           <InputField name="firstName" placeholder="First Name *" required value={formData.firstName} onChange={handleChange} />
@@ -116,11 +132,11 @@ const ContactForm: React.FC = () => {
               placeholder="Hello, I am a...*"
               value={formData.message}
               onChange={handleChange}
-              className="w-full p-2 border border-gray-500 bg-gray-200 text-black rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+              className="w-full p-2 border border-gray-500 bg-gray-200 text-black focus:outline-none focus:ring-2 focus:ring-blue-400 placeholder:text-[#000000]"
             ></textarea>
             {errors.message && <p className="text-red-500 text-sm">{errors.message}</p>}
           </div>
-          <div className="col-span-1 sm:col-span-2 flex justify-center sm:justify-start">
+          <div className="col-span-1 sm:col-span-2 flex justify-start">
             <Button title="Submit" type="submit" />
           </div>
         </form>

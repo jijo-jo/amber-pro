@@ -29,9 +29,11 @@ const InputField: React.FC<InputFieldProps> = ({
         required={required}
         value={value}
         onChange={onChange}
-        className={`w-full p-2 border rounded-md focus:outline-none focus:ring-2 ${
+        className={`w-full p-2 border focus:outline-none focus:ring-2 ${
           error ? "border-red-500 focus:ring-red-400" : "border-gray-500 focus:ring-blue-400"
-        } bg-gray-200 text-black`}
+        } bg-gray-200 text-black placeholder:font-inter placeholder:font-medium placeholder:text-[#000000]
+           placeholder:text-[13.89px] placeholder:leading-[19px] placeholder:tracking-[0%] 
+           placeholder:align-middle`}
       />
       {error && <p className="text-red-500 text-sm mt-1">{error}</p>}
     </div>
@@ -39,4 +41,5 @@ const InputField: React.FC<InputFieldProps> = ({
 };
 
 export default InputField;
+
 
